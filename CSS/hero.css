@@ -1,0 +1,93 @@
+/* Add these styles for the hero search bar */
+
+.hero-search-container {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-search-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-search-input {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  padding-right: 4rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(63, 64, 255, 0.3);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.hero-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-search-input:focus {
+  border-color: rgba(0, 195, 255, 0.7);
+  box-shadow: 0 0 20px rgba(63, 64, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-search-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, rgba(0, 111, 255, 0.9), rgba(0, 195, 255, 0.9));
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-search-button:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+}
+
+.hero-search-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.search-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.suggestion {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.suggestion:hover {
+  background: rgba(0, 195, 255, 0.2);
+  border-color: rgba(0, 195, 255, 0.4);
+  color: #fff;
+}
