@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+    />
+    
+    <title>Droll Agents</title>
+    <link rel="icon" href="logo/favicon.png">
+
+    <!-- Three.js and Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <!-- Locomotive Scroll CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/hero.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+  </head>
+  <body>
+    <div class="vanta-bg"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <div class="main-container" data-scroll-container>
+      <div class="scroll-container">
+        <!-- Hero Section -->
+        <div class="page hero-section" data-scroll-section>
+          <h1 class="hero-title">Droll Agents</h1>
+          <p class="hero-subtitle">
+            Next-generation artificial intelligence solutions with a touch of
+            wit. Discover specialized AI agents that combine power with
+            personality.
+          </p>
+
+        <!--Search setion-->
+        <div class="hero-search-container">
+          <div class="hero-search-wrapper">
+            <input type="text" class="hero-search-input" placeholder="Search for AI agents..." aria-label="Search for AI agents">
+            <button class="hero-search-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="search-suggestions">
+            <span class="suggestion">Productivity</span>
+            <span class="suggestion">Creative</span>
+            <span class="suggestion">Data Analysis</span>
+            <span class="suggestion">Automation</span>
+          </div>
+        </div>
+        </div>
+
+        <!-- AI Categories -->
+        <div class="page" data-scroll-section>
+          <h2 class="section-title">AI Agent Categories</h2>
+          <div class="card-grid">
+            <div class="ai-card">
+              <h3 class="card-title">Productivity Agents</h3>
+              <p class="card-content">
+                AI-powered tools for workflow optimization, task automation, and
+                efficiency enhancement.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">Creative Agents</h3>
+              <p class="card-content">
+                Generative AI for content creation, design assistance, and
+                creative exploration.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">Analytical Agents</h3>
+              <p class="card-content">
+                Data processing, pattern recognition, and predictive analytics
+                specialists.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Agents -->
+        <div class="page" data-scroll-section>
+          <h2 class="section-title">Featured AI Agents</h2>
+          <div class="card-grid">
+            <div class="ai-card">
+              <h3 class="card-title">Project Orion</h3>
+              <p class="card-content">
+                Advanced project management AI with predictive scheduling
+                capabilities.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">ArtisMind</h3>
+              <p class="card-content">
+                Creative co-pilot for designers and content creators.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">DataForge</h3>
+              <p class="card-content">
+                Real-time data analysis and visualization expert.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="page technology-stack" data-scroll-section>
+          <h2 class="section-title">Core Technologies</h2>
+          <div class="card-grid">
+            <div class="ai-card">
+              <h3 class="card-title">Neural Architecture</h3>
+              <p class="card-content">
+                Custom-built neural networks optimized for specific tasks.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">Neural Architecture</h3>
+              <p class="card-content">
+                Custom-built neural networks optimized for specific tasks.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">Neural Architecture</h3>
+              <p class="card-content">
+                Custom-built neural networks optimized for specific tasks.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">Quantum Learning</h3>
+              <p class="card-content">
+                Advanced machine learning techniques for rapid adaptation.
+              </p>
+            </div>
+            <div class="ai-card">
+              <h3 class="card-title">Ethical Framework</h3>
+              <p class="card-content">
+                Built-in ethical constraints and safety protocols.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer-container" class="page footer" data-scroll-section></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
+    <script src="JS/templates.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/search.js"></script>
+    <script src="JS/navigation.js"></script>
+    
+  </body>
+</html>
