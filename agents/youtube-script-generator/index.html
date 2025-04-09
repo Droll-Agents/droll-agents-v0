@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+    <title>YouTube Script Generator - Droll Agents</title>
+    <link rel="icon" href="../../logo/favicon.png" />
+
+    <!-- Three.js and Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../CSS/index.css" />
+    <link rel="stylesheet" href="../../CSS/navbar.css" />
+    <link rel="stylesheet" href="../../CSS/footer.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="vanta-bg"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <div class="main-container">
+        <!-- Back to Agents Link -->
+        <div class="back-navigation">
+            <a href="../../agents.html" class="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Agents
+            </a>
+        </div>
+
+        <div class="container">
+            <h1>YouTube Script Generator</h1>
+            
+            <form id="scriptForm">
+                <div class="form-group">
+                    <label for="video_type">Video Type:</label>
+                    <select id="video_type" name="video_type" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="Explainer Video">Explainer Video</option>
+                        <option value="Product Demo">Product Demo</option>
+                        <option value="Tutorial/How-To">Tutorial/How-To</option>
+                        <option value="Promotional/Advertisement">Promotional/Advertisement</option>
+                        <option value="Educational/Lecture">Educational/Lecture</option>
+                        <option value="Trailer">Trailer (for movies, games, events)</option>
+                        <option value="Podcast-style discussion">Podcast-style discussion</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="video_topic">Video Topic:</label>
+                    <input type="text" id="video_topic" name="video_topic" placeholder="E.g., Introduction to Python Programming" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="video_duration">Video Duration:</label>
+                    <select id="video_duration" name="video_duration" required>
+                        <option value="30 seconds">30 seconds</option>
+                        <option value="1 minute">1 minute</option>
+                        <option value="2 minutes">2 minutes</option>
+                        <option value="3 minutes">3 minutes</option>
+                        <option value="5 minutes" selected>5 minutes</option>
+                        <option value="8 minutes">8 minutes</option>
+                        <option value="8+ minutes">8+ minutes</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="video_tone">Video Tone:</label>
+                    <select id="video_tone" name="video_tone" required>
+                        <option value="" selected disabled>Select a tone</option>
+                        <option value="Casual/Conversational">Casual/Conversational</option>
+                        <option value="Professional/Formal">Professional/Formal</option>
+                        <option value="Humorous/Funny">Humorous/Funny</option>
+                        <option value="Inspirational/Motivational">Inspirational/Motivational</option>
+                        <option value="Educational/Informative">Educational/Informative</option>
+                        <option value="Dramatic/Intense">Dramatic/Intense</option>
+                        <option value="Friendly/Approachable">Friendly/Approachable</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Target Audience:</label>
+                    
+                    <div class="audience-options">
+                        <div class="radio-group">
+                            <input type="radio" id="audience_predefined" name="audience_type" value="predefined" checked>
+                            <label for="audience_predefined">Select from examples</label>
+                            
+                            <input type="radio" id="audience_custom" name="audience_type" value="custom">
+                            <label for="audience_custom">Write my own</label>
+                        </div>
+                        
+                        <div id="predefined_audience_container">
+                            <select id="predefined_audience" name="predefined_audience">
+                                <option value="Beginners">Beginners/Newcomers to the topic</option>
+                                <option value="Intermediate">Intermediate learners</option>
+                                <option value="Advanced">Advanced practitioners</option>
+                                <option value="Technical professionals">Technical professionals</option>
+                                <option value="General public">General public</option>
+                                <option value="Hobbyists">Hobbyists/Enthusiasts</option>
+                                <option value="Students">Students/Academic audience</option>
+                                <option value="Business professionals">Business professionals</option>
+                                <option value="Children">Children/Youth</option>
+                            </select>
+                        </div>
+                        
+                        <div id="custom_audience_container" class="hidden">
+                            <input type="text" id="custom_audience" name="custom_audience" 
+                                placeholder="E.g., Software developers with 2-5 years experience">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="key_messages">Key Messages (one per line):</label>
+                    <textarea id="key_messages" name="key_messages" rows="5" placeholder="Enter one key message per line that you want to emphasize in your video&#10;&#10;Example:&#10;Python is easy to learn&#10;Python has many real-world applications&#10;Anyone can start coding with Python"></textarea>
+                    <div class="help-text">These are the main points you want to convey in your video.</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="visual_themes">Visual Theme Suggestions (Keywords to guide visuals):</label>
+                    <textarea id="visual_themes" name="visual_themes" rows="4" placeholder="Enter keywords for visual elements, one per line&#10;&#10;Example:&#10;Minimalist design&#10;Green and blue color scheme&#10;Code screenshots&#10;Simple animations"></textarea>
+                    <div class="help-text">These keywords will guide the visual style and elements to include in your video.</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button type="submit" id="generateBtn" class="primary-button">Generate My Script</button>
+                </div>
+            </form>
+            
+            <div id="loading" class="hidden">
+                <div class="loader"></div>
+                <p>Crafting your YouTube script...</p>
+                <p class="subtle-text">This may take a moment as we create a tailored script based on your inputs.</p>
+            </div>
+            
+            <div id="result" class="hidden">
+                <div class="result-header">
+                    <h2>Your YouTube Script</h2>
+                    <div class="result-actions">
+                        <button id="copyBtn" class="action-button">
+                            <span class="button-icon">📋</span> Copy to Clipboard
+                        </button>
+                        <button id="newScriptBtn" class="action-button">
+                            <span class="button-icon">✨</span> Create New Script
+                        </button>
+                    </div>
+                </div>
+                <div id="scriptContent" class="script-container"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer-container" class="page footer"></div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="agent-templates.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
