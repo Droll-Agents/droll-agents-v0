@@ -16,42 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
     spacing: 20.0,
   });
 
-  // Initialize Locomotive Scroll with improved settings
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    smartphone: {
-      smooth: true,
-    },
-    tablet: {
-      smooth: true,
-    },
-    // Add these options
-    scrollFromAnywhere: true, 
-    lerp: 0.07, // Smoother scrolling
-    multiplier: 1.0, // Normal scroll speed
-    reloadOnContextChange: true,
-    resetNativeScroll: true
+  // Remove Locomotive Scroll attributes from DOM elements
+  // This will disable all custom scrolling
+  document.querySelectorAll('[data-scroll-section]').forEach(el => {
+    el.removeAttribute('data-scroll-section');
+  });
+  
+  const container = document.querySelector('[data-scroll-container]');
+  if (container) {
+    container.removeAttribute('data-scroll-container');
+  }
+
+  // Make sure all agent cards are visible
+  document.querySelectorAll('.agent-card').forEach(card => {
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
   });
 
   // Update Vanta on resize
   window.addEventListener("resize", function () {
     vantaEffect.resize();
-    // Also update scroll on resize
-    scroll.update();
   });
 
-  // Make sure to update scroll when all content is loaded
-  window.addEventListener("load", function() {
-    scroll.update();
-  });
-  
-  // After footer is loaded, update the scroll
-  const footer = document.getElementById("footer-container");
-  if (footer) {
-    const observer = new MutationObserver(function() {
-      scroll.update();
-    });
-    observer.observe(footer, { childList: true });
-  }
+  console.log("Using native browser scrolling");
 });

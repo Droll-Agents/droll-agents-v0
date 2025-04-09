@@ -41,6 +41,22 @@
             Explore our specialized AI agents designed to enhance your workflow with power and personality.
             Each agent combines cutting-edge technology with intuitive interfaces.
           </p>
+
+                    <!-- Search Bar - Add right before the agents-filter div -->
+          <div class="agents-search-container">
+            <div class="agents-search-wrapper">
+              <input type="text" class="agents-search-input" placeholder="Search agents by name or description..." aria-label="Search agents">
+              <button class="agents-search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="agents-count">
+              Showing <span id="agent-count-display">8</span> agents
+            </div>
+          </div>
           
           <!-- Filter/Category section -->
           <div class="agents-filter">
