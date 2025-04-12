@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+      { "src": "*.html", "use": "@vercel/static" },
+      { "src": "CSS/**/*.css", "use": "@vercel/static" },
+      { "src": "JS/**/*.js", "use": "@vercel/static" },
+      { "src": "agents/**/*", "use": "@vercel/static" },
+      { "src": "templates/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+      { "src": "/agents/youtube-script-generator/(.*)", "dest": "/agents/youtube-script-generator/$1" },
+      { "src": "/CSS/(.*)", "dest": "/CSS/$1" },
+      { "src": "/JS/(.*)", "dest": "/JS/$1" },
+      { "src": "/templates/(.*)", "dest": "/templates/$1" },
+      { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

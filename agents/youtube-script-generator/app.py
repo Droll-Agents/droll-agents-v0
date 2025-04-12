@@ -1,11 +1,16 @@
 from flask import Flask, render_template, request, jsonify
 from utils import process_script_request
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__, 
             static_url_path='', 
             static_folder='.',
             template_folder='.')
+
+API_URL = os.getenv('API_URL', 'http://localhost:5000') 
 
 @app.route('/', methods=['GET'])
 def index():
