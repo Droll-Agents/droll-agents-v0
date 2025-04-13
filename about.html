@@ -2,90 +2,333 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
-    />
-    <title>Droll Agents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+    <meta name="description" content="Learn about the Droll Agents team and our mission to create powerful AI assistants that enhance your workflow." />
+    
+    <title>About Us - Droll Agents</title>
+    <link rel="icon" href="logo/favicon.png">
 
-    <!-- Three.js and Vanta.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-
-    <link rel="stylesheet" href="CSS/about.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/index.css" />
     <link rel="stylesheet" href="CSS/navbar.css" />
     <link rel="stylesheet" href="CSS/footer.css" />
-
+    <link rel="stylesheet" href="CSS/about.css" />
   </head>
   <body>
-    <div class="vanta-bg"></div>
-
+    <!-- Navbar -->
     <div id="navbar-container"></div>
 
-    <div class="main-container" data-scroll-container>
+    <div class="main-container">
       <div class="scroll-container">
-        <div class="page" data-scroll-section>
+        <!-- About Hero Section -->
+        <section class="page about-hero">
+          <div class="hero-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+          </div>
+          
+          <div class="container">
+            <div class="about-hero-content">
+              <div class="section-badge">Our Story</div>
+              <h1 class="about-title">About Droll Agents</h1>
+              <p class="about-subtitle">Meet the team building the next generation of AI assistants</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Main Content Section -->
+        <section class="page section-light">
+          <div class="container">
             <div class="about-section">
-              <!-- Left Column - About Content -->
-              <div class="about-content">
-                <h2 class="section-heading">About Droll Agents</h2>
-                <p class="about-text">
-                  Welcome to Droll Agents—where innovation meets excellence!<br><br>
-                  We started with a vision: to redefine AI interactions by delivering 
-                  personality-infused intelligent solutions. What sets us apart is our 
-                  relentless commitment to quality, creativity, and customer satisfaction.
-                </p>
-          
-                <h3 class="section-heading" style="font-size: 2rem">Who We Are</h3>
-                <p class="about-text">
-                  We are a team of passionate AI experts driven by the desire to create 
-                  meaningful human-machine interactions. With years of experience and a 
-                  keen eye for emerging technologies, we ensure every solution we create 
-                  exceeds expectations.
-                </p>
-          
-                <h3 class="section-heading" style="font-size: 2rem">Our Mission</h3>
-                <p class="about-text">
-                  To empower, inspire, and deliver top-tier AI solutions that enhance 
-                  digital experiences through natural, intuitive interactions.
-                </p>
-          
-                <h3 class="section-heading" style="font-size: 2rem">Our Values</h3>
-                <ul class="values-list">
-                  <li class="value-item">Innovation – Pushing boundaries to stay ahead</li>
-                  <li class="value-item">Quality – Delivering nothing but the best</li>
-                  <li class="value-item">Customer-Centric – Your satisfaction is our priority</li>
-                </ul>
-              </div>
-          
-              <!-- Right Column - Contact Form -->
-              <div class="contact-form">
-                <h3 class="form-title">Contact Us</h3>
-                <form>
-                  <div class="form-group">
-                    <input type="text" class="form-input" placeholder="Your Name" required>
+              <!-- Company Story -->
+              <div class="about-content-wrapper">
+                <div class="about-content">
+                  <div class="section-header">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p class="section-subtitle">We're building AI agents that enhance human capabilities</p>
                   </div>
-                  <div class="form-group">
-                    <input type="email" class="form-input" placeholder="Your Email" required>
+                  
+                  <p class="about-text">
+                    Welcome to Droll Agents—where innovation meets excellence! We started with a simple vision: to redefine AI interactions by delivering personality-infused intelligent solutions that feel natural and intuitive.
+                  </p>
+                  
+                  <p class="about-text">
+                    What sets us apart is our relentless commitment to quality, creativity, and customer satisfaction. Every agent we build combines cutting-edge AI technology with thoughtful design to create experiences that truly enhance your workflow.
+                  </p>
+                  
+                  <div class="about-values">
+                    <h3>Our Core Values</h3>
+                    <ul class="values-list">
+                      <li class="value-item">
+                        <span class="value-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.995.995 0 0 1-.877.29c-.33-.049-.637-.128-.917-.23a10.542 10.542 0 0 0-1.174-.341c-.179-.04-.37-.024-.552.009-.29.052-.56.208-.75.397l-1.685 1.685c-.47.47-1.087.706-1.704.706s-1.233-.235-1.704-.706l-1.568-1.568a1.018 1.018 0 0 1-.29-.89c.05-.326.13-.637.23-.916.12-.383.223-.778.341-1.174.34-.179.025-.37-.008-.553-.051-.28-.207-.55-.394-.74L6.972 9.57a2.404 2.404 0 0 1 0-3.407l1.568-1.568c.47-.47 1.087-.706 1.704-.706s1.233.235 1.704.706l1.667 1.667c.19.19.458.346.747.398A.993.993 0 0 0 15 6.63c0-.114-.026-.229-.08-.333a10.098 10.098 0 0 0-.341-1.173 5.6 5.6 0 0 1-.23-.917.995.995 0 0 1 .289-.878l1.61-1.611a2.404 2.404 0 0 1 3.407 0l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704L19.44 7.85Z"></path>
+                          </svg>
+                        </span>
+                        <div>
+                          <h4>Innovation</h4>
+                          <p>Pushing boundaries to stay ahead of the technological curve</p>
+                        </div>
+                      </li>
+                      <li class="value-item">
+                        <span class="value-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                          </svg>
+                        </span>
+                        <div>
+                          <h4>Quality</h4>
+                          <p>Delivering nothing but the best in every interaction</p>
+                        </div>
+                      </li>
+                      <li class="value-item">
+                        <span class="value-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                          </svg>
+                        </span>
+                        <div>
+                          <h4>Customer-Centric</h4>
+                          <p>Your satisfaction is our top priority</p>
+                        </div>
+                      </li>
+                      <li class="value-item">
+                        <span class="value-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                            <path d="M12 9v4"></path>
+                            <path d="M12 17h.01"></path>
+                          </svg>
+                        </span>
+                        <div>
+                          <h4>Ethical AI</h4>
+                          <p>Developing responsible technology for a better future</p>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="form-group">
-                    <textarea class="form-input" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                  <div class="contact-form">
+                    <h3 class="form-title">Get In Touch</h3>
+                    <form id="contact-form">
+                      <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-input" placeholder="How can we help you?" required></textarea>
+                      </div>
+                      <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 2L11 13"></path>
+                          <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                        </svg>
+                      </button>
+                    </form>
                   </div>
-                  <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="page stats-section">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">Our Impact</h2>
+              <p class="section-subtitle">The numbers that define our journey</p>
+            </div>
+            
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 1 0 10 10H12V2Z"></path>
+                    <path d="M21 12a9 9 0 0 1-9 9"></path>
+                    <path d="M12 11h5a4 4 0 0 1 0 8h-5v-8Z"></path>
+                  </svg>
+                </div>
+                <div class="stat-value">30+</div>
+                <div class="stat-label">Countries Reached</div>
+                <div class="stat-text">Our solutions are used by clients across the globe, helping businesses streamline operations.</div>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.2 6 3 11.7V14l6.2-1.6"></path>
+                    <path d="M3 14v5.3L9 22l.7-3.3"></path>
+                    <path d="m20.2 6 .5 11.2L14 20.5l-2.1-2"></path>
+                    <path d="M20.2 6 13 7.3l-3.1 1.5"></path>
+                  </svg>
+                </div>
+                <div class="stat-value">15+</div>
+                <div class="stat-label">Patents Filed</div>
+                <div class="stat-text">Our dedicated R&D team works tirelessly to push the boundaries of AI technology.</div>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                  </svg>
+                </div>
+                <div class="stat-value">10%</div>
+                <div class="stat-label">AI for Good</div>
+                <div class="stat-text">We dedicate resources to projects that address social and environmental challenges.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="page section-light team-section">
+          <div class="container">
+            <div class="section-header">
+              <span class="section-badge">Our Team</span>
+              <h2 class="section-title">Meet The Experts</h2>
+              <p class="section-subtitle">The brilliant minds behind our innovative AI solutions</p>
+            </div>
+            
+            <div class="team-grid">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=300&h=300" alt="Sarah Johnson" class="member-photo">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Sarah Johnson</h3>
+                  <p class="member-role">CEO & AI Architect</p>
+                  <p class="member-bio">Ph.D. in Machine Learning with over 10 years of experience in developing AI solutions for enterprise clients.</p>
+                  <div class="social-links">
+                    <a href="#" class="social-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&q=80&w=300&h=300" alt="Michael Chen" class="member-photo">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Michael Chen</h3>
+                  <p class="member-role">CTO & Lead Engineer</p>
+                  <p class="member-bio">Expert in natural language processing and neural network architecture with a background in computer linguistics.</p>
+                  <div class="social-links">
+                    <a href="#" class="social-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300&h=300" alt="Elena Rodriguez" class="member-photo">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Elena Rodriguez</h3>
+                  <p class="member-role">UX Director</p>
+                  <p class="member-bio">Specializes in human-AI interaction design with a focus on creating intuitive and delightful user experiences.</p>
+                  <div class="social-links">
+                    <a href="#" class="social-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="page cta-section">
+          <div class="cta-shapes">
+            <div class="cta-shape cta-shape-1"></div>
+            <div class="cta-shape cta-shape-2"></div>
+          </div>
+          
+          <div class="container">
+            <div class="cta-content">
+              <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">Join Us</span>
+              <h2 class="section-title">Ready to Transform Your Workflow?</h2>
+              <p>Experience the power of our AI agents and see how they can enhance your productivity today.</p>
+              
+              <div class="cta-buttons">
+                <a href="agents.html" class="cta-button">
+                  <span>Explore Our Agents</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="contact.html" class="cta-button-secondary">
+                  <span>Contact Us</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Footer -->
-        <div id="footer-container" class="page footer" data-scroll-section></div>
-        
+        <div id="footer-container" class="page footer"></div>
       </div>
     </div>
 
+    <!-- JavaScript -->
     <script src="JS/templates.js"></script>
     <script src="JS/main.js"></script>
-    <script src="JS/search.js"></script>
-    <script src="JS/vanta.js"></script>
+    <script src="JS/about.js"></script>
   </body>
 </html>

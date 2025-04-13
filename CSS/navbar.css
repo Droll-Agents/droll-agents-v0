@@ -1,198 +1,414 @@
-nav {
+/* Modern Professional Navbar Styling - Light Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --navbar-height: 72px;
+  --navbar-background: rgba(255, 255, 255, 0.95);
+  --navbar-background-dark: rgba(255, 255, 255, 0.95); /* Changed to light */
+  --navbar-background-scrolled: rgba(255, 255, 255, 0.98);
+  --navbar-background-dark-scrolled: rgba(255, 255, 255, 0.98); /* Changed to light */
+  --navbar-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  --navbar-shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.06); /* Softer shadow for light theme */
+  --navbar-border: rgba(0, 0, 0, 0.05);
+  --navbar-border-dark: rgba(0, 102, 204, 0.1); /* Light blue tinted border */
+  --navbar-text: #1a2b3c;
+  --navbar-text-dark: #1a2b3c; /* Changed to dark text on light background */
+  --primary-color: #0066cc;
+  --primary-color-dark: #0066cc;
+  --accent-gradient: linear-gradient(135deg, #0066cc, #00a3ff);
+}
+
+/* Fixed container for navbar */
+#navbar-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 90%;
-  padding: 1rem 2rem;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  max-width: 100vw; /* Prevent overflow */
+}
+
+.modern-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  z-index: 1000;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: var(--navbar-background);
+  box-shadow: var(--navbar-shadow);
+  border-bottom: 1px solid var(--navbar-border);
+  box-sizing: border-box;
+}
+
+.navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
-  margin: 1.5rem 5%;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 0 10px 30px rgba(0, 111, 255, 0.15), 
-              0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
 }
 
-nav:hover {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 15px 40px rgba(0, 111, 255, 0.2), 
-              0 0 0 1px rgba(255, 255, 255, 0.15) inset;
-  transform: translateY(-2px);
+.modern-navbar.scrolled {
+  height: 64px;
+  background: var(--navbar-background-scrolled);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Section containers */
+/* Navbar Sections */
 .nav-section {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .nav-left {
   flex: 1;
+  min-width: 0; /* Prevent overflow */
 }
 
 .nav-middle {
-  flex: 2;
+  flex: 3;
   justify-content: center;
 }
 
 .nav-right {
   flex: 1;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 12px;
+  min-width: 0; /* Prevent overflow */
 }
 
-/* Enhanced Title Styling */
+/* Brand/Logo */
 .nav-brand {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #00c3ff;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  position: relative;
-  letter-spacing: -0.3px;
-  padding: 0.5rem 0;
+  color: var(--navbar-text);
   transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 .nav-brand:hover {
-  color: #00c3ff;
+  transform: translateY(-1px);
 }
 
-.nav-brand:after {
-  content: none;
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  transition: all 0.3s ease;
 }
 
-.nav-brand:hover:after {
-  width: 0;
+.scrolled .nav-logo-img {
+  height: 32px;
 }
 
+.nav-brand-text {
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-left: 0.4rem;
+  background: linear-gradient(135deg, #1a2b3c, #506580);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.01em;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.nav-brand-text .accent {
+  background: linear-gradient(135deg, #0066cc, #00a3ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Links */
 .nav-links {
   display: flex;
-  gap: 2.5rem;
-  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  font-size: 1.05rem;
-  font-weight: 500;
-  padding: 0.5rem 0;
   position: relative;
-  transition: all 0.3s ease;
-  letter-spacing: 0.2px;
-}
-
-.nav-link:before {
-  content: '';
-  position: absolute;
-  left: 0; 
-  bottom: 0;
-  width: 0%; 
-  height: 2px;
-  background-color: #00c3ff;
-  transition: width 0.3s ease;
-  opacity: 1;
-  transform: none;
+  color: var(--navbar-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: #0066cc;
+  background: rgba(0, 102, 204, 0.04);
+  transform: translateY(-1px);
 }
 
-.nav-link:hover:before {
-  width: 100%;
+.nav-link.active {
+  color: #0066cc;
+  font-weight: 600;
+  background: rgba(0, 102, 204, 0.08);
 }
 
-/* Nav button styles */
+.nav-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover .nav-link-icon {
+  transform: translateY(-2px);
+}
+
+/* Authentication Buttons */
 .nav-button {
-  padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  border: none;
-  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
   font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 .login-button {
-  background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--navbar-text);
+  background: rgba(0, 102, 204, 0.05);
+  border: 1px solid rgba(0, 102, 204, 0.15);
 }
 
 .login-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 102, 204, 0.1);
+  transform: translateY(-2px);
 }
 
 .signup-button {
-  background: rgba(0, 195, 255, 0.8);
-  color: #fff;
+  color: white;
+  background: var(--accent-gradient);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
 }
 
 .signup-button:hover {
-  background: rgba(0, 195, 255, 1);
-  box-shadow: 0 0 15px rgba(0, 195, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 102, 204, 0.3);
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 992px) {
-  nav {
-    width: 95%;
-    margin: 1rem 2.5%;
-    padding: 0.8rem 1.5rem;
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21px;
+  width: 28px;
+  cursor: pointer;
+  z-index: 1010;
+  margin-left: 15px;
+}
+
+.menu-toggle span {
+  height: 2px;
+  width: 100%;
+  background-color: var(--navbar-text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  height: calc(100vh - var(--navbar-height));
+  background: var(--navbar-background);
+  padding: 2rem 1.5rem;
+  z-index: 999;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--navbar-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover, 
+.mobile-nav-link.active {
+  background: rgba(0, 102, 204, 0.08);
+  color: #0066cc;
+  transform: translateX(5px);
+}
+
+.mobile-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 102, 204, 0.08);
+  border-radius: 8px;
+  color: var(--primary-color);
+}
+
+.mobile-auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mobile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mobile-login {
+  background: rgba(0, 102, 204, 0.05);
+  border: 1px solid rgba(0, 102, 204, 0.15);
+  color: #1a2b3c;
+}
+
+.mobile-signup {
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
+}
+
+/* Add consistent body spacing for fixed navbar */
+body {
+  padding-top: var(--navbar-height);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .nav-link-text {
+    display: none;
   }
   
-  .nav-links {
-    gap: 1.5rem;
+  .nav-link {
+    padding: 0.6rem;
   }
   
-  .nav-button {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
+  .nav-link-icon {
+    margin: 0;
   }
 }
 
 @media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
+  .nav-middle,
+  .nav-right {
+    display: none;
   }
   
-  .nav-middle {
-    order: 3;
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .navbar-container {
+    padding: 0 1.2rem;
+    justify-content: space-between;
     width: 100%;
-    margin-top: 1rem;
   }
   
-  .nav-left, .nav-right {
+  .nav-left {
     flex: 1;
-  }
-  
-  .nav-brand {
-    font-size: 1.5rem;
-  }
-  
-  .nav-links {
-    gap: 1rem;
   }
 }
 
 @media (max-width: 576px) {
-  .nav-links {
-    gap: 0.7rem;
+  :root {
+    --navbar-height: 64px;
   }
   
-  .nav-link {
-    font-size: 0.9rem;
+  .modern-navbar {
+    height: 64px;
   }
   
-  .nav-button {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
+  .nav-logo-img {
+    height: 32px;
+  }
+  
+  .nav-brand-text {
+    font-size: 1.2rem;
+  }
+  
+  .mobile-menu {
+    top: 64px;
+    height: calc(100vh - 64px);
+  }
+  
+  body {
+    padding-top: 64px;
+  }
+  
+  #navbar-container {
+    overflow: hidden;
   }
 }

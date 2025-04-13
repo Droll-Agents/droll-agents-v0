@@ -4,16 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+  <meta name="description" content="Explore Droll Agents' specialized AI assistants designed to enhance productivity, creativity, analytics and communication." />
 
   <title>AI Agents - Droll Agents</title>
   <link rel="icon" href="logo/favicon.png" />
-
-  <!-- Three.js and Vanta.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-
-  <!-- Locomotive Scroll CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="CSS/index.css" />
@@ -23,370 +17,418 @@
 </head>
 
 <body>
-  <div class="vanta-bg"></div>
-
   <!-- Navbar -->
   <div id="navbar-container"></div>
 
-  <div class="main-container" data-scroll-container>
+  <div class="main-container">
     <div class="scroll-container">
       <!-- Agents Header -->
-      <div class="page agents-header" data-scroll-section>
-        <h1 class="agents-title">AI Agents Directory</h1>
-        <p class="agents-subtitle">
-          Explore our specialized AI agents designed to enhance your workflow
-          with power and personality. Each agent combines cutting-edge
-          technology with intuitive interfaces.
-        </p>
+      <section class="page agents-header">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">AI Directory</span>
+            <h1 class="agents-title">Specialized AI Agents</h1>
+            <p class="agents-subtitle">
+              Explore our specialized AI agents designed to enhance your workflow
+              with power and personality. Each agent combines cutting-edge
+              technology with intuitive interfaces.
+            </p>
+          </div>
 
-        <!-- Search Bar - Add right before the agents-filter div -->
-        <div class="agents-search-container">
-          <div class="agents-search-wrapper">
-            <input type="text" class="agents-search-input" placeholder="Search agents by name or description..."
-              aria-label="Search agents" />
-            <button class="agents-search-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
+          <!-- Search Bar -->
+          <div class="agents-search-container">
+            <div class="agents-search-wrapper">
+              <input type="text" class="agents-search-input" placeholder="Search agents by name or description..."
+                aria-label="Search agents" />
+              <button class="agents-search-button" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="agents-count">
+              Showing <span id="agent-count-display">8</span> agents
+            </div>
+          </div>
+
+          <!-- Filter/Category section -->
+          <div class="agents-filter">
+            <button class="filter-btn active" data-category="all">
+              All Agents
+            </button>
+            <button class="filter-btn" data-category="productivity">
+              Productivity
+            </button>
+            <button class="filter-btn" data-category="creative">
+              Creative
+            </button>
+            <button class="filter-btn" data-category="analytical">
+              Analytical
+            </button>
+            <button class="filter-btn" data-category="communication">
+              Communication
             </button>
           </div>
-          <div class="agents-count">
-            Showing <span id="agent-count-display">8</span> agents
-          </div>
         </div>
-
-        <!-- Filter/Category section -->
-        <div class="agents-filter">
-          <button class="filter-btn active" data-category="all">
-            All Agents
-          </button>
-          <button class="filter-btn" data-category="productivity">
-            Productivity
-          </button>
-          <button class="filter-btn" data-category="creative">
-            Creative
-          </button>
-          <button class="filter-btn" data-category="analytical">
-            Analytical
-          </button>
-          <button class="filter-btn" data-category="communication">
-            Communication
-          </button>
-        </div>
-      </div>
+      </section>
 
       <!-- Agents Grid -->
-      <div class="page agents-grid-container" data-scroll-section>
-        <div class="agents-grid">
-          
-          <!-- YouTube Script Generator - Creative Agent -->
-          <div class="agent-card" data-category="creative">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">YouTube Script Generator</h3>
-                  <span class="agent-tag creative">Creative</span>
-                </div>
+      <section class="page agents-grid-container section-light">
+        <div class="container">
+          <div class="agents-grid">
+            
+            <!-- YouTube Script Generator - Creative Agent -->
+            <div class="agent-card" data-category="creative">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>YouTube Script Generator</h3>
+                <span class="agent-tag creative">Creative</span>
+              </div>
+              <p>
                 Create professional, engaging scripts for YouTube videos in minutes. Customize by video type, audience, tone, and visual direction for content that keeps viewers watching.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Script Generation</span>
-                <span class="feature-item">Visual Directions</span>
-                <span class="feature-item">Content Structure</span>
+              <ul class="agent-features">
+                <li>Script Generation</li>
+                <li>Visual Directions</li>
+                <li>Content Structure</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agents/youtube-script-generator/" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agents/youtube-script-generator/" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
-          
-          <!-- Investment Strategies Agent - Analytical Agent -->
-          <div class="agent-card" data-category="analytical">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">Investment Strategies</h3>
-                  <span class="agent-tag analytical">Analytical</span>
-                </div>
+            
+            <!-- Investment Strategies Agent - Analytical Agent -->
+            <div class="agent-card" data-category="analytical">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18"></path>
+                  <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>Investment Strategies</h3>
+                <span class="agent-tag analytical">Analytical</span>
+              </div>
+              <p>
                 Personalized investment advice based on your financial goals, risk tolerance, and market conditions. Get data-driven portfolio recommendations and risk analysis.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Portfolio Analysis</span>
-                <span class="feature-item">Risk Assessment</span>
-                <span class="feature-item">Market Trends</span>
+              <ul class="agent-features">
+                <li>Portfolio Analysis</li>
+                <li>Risk Assessment</li>
+                <li>Market Trends</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-investment.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-investment.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
-          <!-- Productivity Agents -->
-          <div class="agent-card" data-category="productivity">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">Project Orion</h3>
-                  <span class="agent-tag productivity">Productivity</span>
-                </div>
+            
+            <!-- Project Orion - Productivity Agent -->
+            <div class="agent-card" data-category="productivity">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
               </div>
-              <p class="agent-description">
-                Advanced project management AI with predictive scheduling
-                capabilities. Project Orion helps teams stay organized, meet
-                deadlines, and optimize resource allocation.
+              <div class="agent-header">
+                <h3>Project Orion</h3>
+                <span class="agent-tag productivity">Productivity</span>
+              </div>
+              <p>
+                Advanced project management AI with predictive scheduling capabilities. Project Orion helps teams stay organized, meet deadlines, and optimize resource allocation.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Task Automation</span>
-                <span class="feature-item">Timeline Prediction</span>
-                <span class="feature-item">Resource Optimization</span>
+              <ul class="agent-features">
+                <li>Task Automation</li>
+                <li>Timeline Prediction</li>
+                <li>Resource Optimization</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-orion.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-orion.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
 
-          <div class="agent-card" data-category="productivity">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="17 1 21 5 17 9"></polyline>
-                    <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-                    <polyline points="7 23 3 19 7 15"></polyline>
-                    <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">WorkflowGenius</h3>
-                  <span class="agent-tag productivity">Productivity</span>
-                </div>
+            <!-- WorkflowGenius - Productivity Agent -->
+            <div class="agent-card" data-category="productivity">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="17 1 21 5 17 9"></polyline>
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                  <polyline points="7 23 3 19 7 15"></polyline>
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>WorkflowGenius</h3>
+                <span class="agent-tag productivity">Productivity</span>
+              </div>
+              <p>
                 Streamline your daily tasks with automated workflows and
                 intelligent suggestions. WorkflowGenius learns your patterns
                 and optimizes your processes.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Process Automation</span>
-                <span class="feature-item">Smart Suggestions</span>
-                <span class="feature-item">Habit Tracking</span>
+              <ul class="agent-features">
+                <li>Process Automation</li>
+                <li>Smart Suggestions</li>
+                <li>Habit Tracking</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-workflow.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-workflow.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
 
-
-
-          <!-- Creative Agents -->
-          <div class="agent-card" data-category="creative">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                    <path d="M2 2l7.586 7.586"></path>
-                    <circle cx="11" cy="11" r="2"></circle>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">ArtisMind</h3>
-                  <span class="agent-tag creative">Creative</span>
-                </div>
+            <!-- ArtisMind - Creative Agent -->
+            <div class="agent-card" data-category="creative">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>ArtisMind</h3>
+                <span class="agent-tag creative">Creative</span>
+              </div>
+              <p>
                 Creative co-pilot for designers and content creators.
                 ArtisMind generates ideas, enhances visuals, and helps
                 overcome creative blocks with AI-powered suggestions.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Design Assistance</span>
-                <span class="feature-item">Idea Generation</span>
-                <span class="feature-item">Style Transfer</span>
+              <ul class="agent-features">
+                <li>Design Assistance</li>
+                <li>Idea Generation</li>
+                <li>Style Transfer</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-artismind.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-artismind.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
 
-          <div class="agent-card" data-category="creative">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon>
-                    <line x1="3" y1="22" x2="21" y2="22"></line>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">NarrativeForge</h3>
-                  <span class="agent-tag creative">Creative</span>
-                </div>
+            <!-- NarrativeForge - Creative Agent -->
+            <div class="agent-card" data-category="creative">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon>
+                  <line x1="3" y1="22" x2="21" y2="22"></line>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>NarrativeForge</h3>
+                <span class="agent-tag creative">Creative</span>
+              </div>
+              <p>
                 AI storytelling assistant that helps writers develop plots,
                 characters, and dialogue. Turn your creative ideas into
                 compelling narratives with ease.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Plot Development</span>
-                <span class="feature-item">Character Creation</span>
-                <span class="feature-item">Dialogue Generation</span>
+              <ul class="agent-features">
+                <li>Plot Development</li>
+                <li>Character Creation</li>
+                <li>Dialogue Generation</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-narrative.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-narrative.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
 
-          <!-- Analytical Agents -->
-          <div class="agent-card" data-category="analytical">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">DataForge</h3>
-                  <span class="agent-tag analytical">Analytical</span>
-                </div>
+            <!-- DataForge - Analytical Agent -->
+            <div class="agent-card" data-category="analytical">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>DataForge</h3>
+                <span class="agent-tag analytical">Analytical</span>
+              </div>
+              <p>
                 Real-time data analysis and visualization expert. DataForge
                 transforms complex datasets into actionable insights through
                 intuitive visualizations and reports.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Pattern Recognition</span>
-                <span class="feature-item">Interactive Visualizations</span>
-                <span class="feature-item">Predictive Analysis</span>
+              <ul class="agent-features">
+                <li>Pattern Recognition</li>
+                <li>Interactive Visualizations</li>
+                <li>Predictive Analysis</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-dataforge.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-dataforge.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
 
-          <div class="agent-card" data-category="analytical">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                    </path>
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">InsightCube</h3>
-                  <span class="agent-tag analytical">Analytical</span>
-                </div>
+            <!-- InsightCube - Analytical Agent -->
+            <div class="agent-card" data-category="analytical">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                  </path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>InsightCube</h3>
+                <span class="agent-tag analytical">Analytical</span>
+              </div>
+              <p>
                 Multidimensional data modeling and business intelligence
                 agent. InsightCube identifies hidden connections in your data
                 and suggests strategic decisions.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Data Modeling</span>
-                <span class="feature-item">Trend Analysis</span>
-                <span class="feature-item">Strategic Recommendations</span>
+              <ul class="agent-features">
+                <li>Data Modeling</li>
+                <li>Trend Analysis</li>
+                <li>Strategic Recommendations</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-insightcube.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-insightcube.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
 
-          <!-- Communication Agents -->
-          <div class="agent-card" data-category="communication">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">DialogFlow</h3>
-                  <span class="agent-tag communication">Communication</span>
-                </div>
+            <!-- DialogFlow - Communication Agent -->
+            <div class="agent-card" data-category="communication">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>DialogFlow</h3>
+                <span class="agent-tag communication">Communication</span>
+              </div>
+              <p>
                 Natural language processing agent that enhances communication.
                 DialogFlow helps you write more effectively, translate
                 content, and maintain consistent tone.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Text Enhancement</span>
-                <span class="feature-item">Translation</span>
-                <span class="feature-item">Tone Consistency</span>
+              <ul class="agent-features">
+                <li>Text Enhancement</li>
+                <li>Translation</li>
+                <li>Tone Consistency</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-dialogflow.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-dialogflow.html" class="agent-action-btn">Try This Agent</a>
             </div>
-          </div>
 
-          <div class="agent-card" data-category="communication">
-            <div class="agent-card-inner">
-              <div class="agent-header">
-                <div class="agent-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
-                    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
-                    <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
-                    <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
-                    <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
-                  </svg>
-                </div>
-                <div class="agent-info">
-                  <h3 class="agent-name">ConnectSphere</h3>
-                  <span class="agent-tag communication">Communication</span>
-                </div>
+            <!-- ConnectSphere - Communication Agent -->
+            <div class="agent-card" data-category="communication">
+              <div class="agent-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                  <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                  <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                  <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                  <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                </svg>
               </div>
-              <p class="agent-description">
+              <div class="agent-header">
+                <h3>ConnectSphere</h3>
+                <span class="agent-tag communication">Communication</span>
+              </div>
+              <p>
                 Team collaboration and communication enhancement tool.
                 ConnectSphere facilitates better meetings, resolves conflicts,
                 and improves team dynamics.
               </p>
-              <div class="agent-features">
-                <span class="feature-item">Meeting Facilitation</span>
-                <span class="feature-item">Conflict Resolution</span>
-                <span class="feature-item">Team Analysis</span>
+              <ul class="agent-features">
+                <li>Meeting Facilitation</li>
+                <li>Conflict Resolution</li>
+                <li>Team Analysis</li>
+              </ul>
+              <div class="agent-button">
+                <a href="agent-connectsphere.html" class="primary-button">
+                  <span>Try This Agent</span>
+                </a>
               </div>
-              <a href="agent-connectsphere.html" class="agent-action-btn">Try This Agent</a>
+            </div>
+            
+            <!-- No results message displays when no matches are found -->
+            <div class="no-results">No agents found matching your search. Try different keywords.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="page cta-section">
+        <div class="cta-shapes">
+          <div class="cta-shape cta-shape-1"></div>
+          <div class="cta-shape cta-shape-2"></div>
+        </div>
+        
+        <div class="container">
+          <div class="cta-content">
+            <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">Get Started</span>
+            <h2 class="section-title">Ready to Enhance Your Workflow?</h2>
+            <p>Create an account to start using our AI agents and experience the difference in your productivity today.</p>
+            
+            <div class="cta-buttons">
+              <a href="signup.html" class="cta-button">
+                <span>Sign Up for Free</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="login.html" class="cta-button-secondary">
+                <span>Sign In</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                  <polyline points="10 17 15 12 10 7"></polyline>
+                  <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Footer -->
-      <div id="footer-container" class="page footer" data-scroll-section></div>
+      <div id="footer-container" class="page footer"></div>
     </div>
   </div>
 
   <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
   <script src="JS/templates.js"></script>
   <script src="JS/main.js"></script>
   <script src="JS/agents.js"></script>

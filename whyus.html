@@ -3,109 +3,277 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
-  <title>Droll Agents</title>
+  <meta name="viewport" content="width=device-width, initial-scale=5, viewport-fit=cover" />
+  <title>Why Choose Us - Droll Agents</title>
+  <link rel="icon" href="logo/favicon.png">
 
-  <!-- Three.js and Vanta.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-
-  <link rel="stylesheet" href="CSS/whyus.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/index.css" />
   <link rel="stylesheet" href="CSS/navbar.css" />
   <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/whyus.css" />
 </head>
 
 <body>
-  <div class="vanta-bg"></div>
-
   <!-- Navbar -->
   <div id="navbar-container"></div>
 
-  <div class="main-container" data-scroll-container>
-    <div class="scroll-container">
-      <div class="page" data-scroll-section>
-        <div class="why-us-section">
-          <h2 class="section-title">Why Choose Droll Agents?</h2>
-          <div class="features-list">
-            <div class="feature-item">
-              <div class="feature-icon">💡</div>
-              <div class="feature-content">
-                <h3 class="feature-title">Intelligent & Adaptive</h3>
-                <p class="feature-description">
-                  Our AI agents understand, learn, and evolve through
-                  interactions. They engage, anticipate needs, and adapt in
-                  real-time.
-                </p>
+  <div class="main-container">
+    <!-- Enhanced Hero section with animated elements -->
+    <div class="hero-container">
+      <!-- Animated background shapes - added the fourth shape -->
+      <div class="hero-shapes">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+        <div class="hero-shape hero-shape-4"></div>
+      </div>
+      <!-- Background pattern -->
+      <div class="hero-bg"></div>
+      
+      <!-- Hero content -->
+      <div class="hero-content">
+        <h1 class="hero-title">Why Choose Droll Agents?</h1>
+        <p class="hero-subtitle">Discover the unique advantages that set our AI solutions apart from the competition</p>
+      </div>
+    </div>
+      
+    <div class="page">
+      <!-- Core Features Section with improved heading -->
+      <div class="why-us-section">
+        <div class="section-header">
+          <span class="section-badge">Core Features</span>
+          <h2 class="section-title">What Makes Our AI Different</h2>
+          <p class="section-subtitle">Our AI agents are designed with cutting-edge technology and a focus on delivering exceptional user experiences that evolve over time.</p>
+        </div>
+        
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Intelligent & Adaptive</h3>
+              <p class="feature-description">
+                Our AI agents understand, learn, and evolve through
+                interactions. They engage, anticipate needs, and adapt in
+                real-time to provide increasingly personalized experiences.
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Privacy-First Approach</h3>
+              <p class="feature-description">
+                End-to-end encryption and strict data policies ensure your
+                conversations remain completely confidential. Your data is never sold or shared with third parties.
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Deep Customization</h3>
+              <p class="feature-description">
+                Tailor your agent's personality, capabilities, and response
+                style to perfectly match your workflow and preferences for a truly personalized experience.
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Instant Responses</h3>
+              <p class="feature-description">
+                Powered by next-gen machine learning architecture delivering
+                real-time interactions with near-zero latency, allowing for smooth, natural conversations.
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Natural Conversations</h3>
+              <p class="feature-description">
+                Context-aware dialogues that flow naturally, understanding
+                nuance and maintaining coherent, multi-turn discussions that feel human-like.
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Continuous Evolution</h3>
+              <p class="feature-description">
+                Regular updates and learning improvements ensure your agent
+                stays ahead of the technology curve and continuously improves with use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <!-- Additional Benefits Section with improved heading -->
+      <div class="benefits-section">
+        <div class="section-header">
+          <span class="section-badge">Platform Benefits</span>
+          <h2 class="section-title">Additional Advantages</h2>
+          <p class="section-subtitle">Beyond core AI capabilities, our platform offers a suite of features designed to enhance your experience and drive better outcomes.</p>
+        </div>
+          
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Performance Analytics</h3>
+            <p class="benefit-description">Gain insights into how your AI agents are performing with detailed analytics and usage reports.</p>
+          </div>
+            
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Multi-Platform Support</h3>
+            <p class="benefit-description">Access your AI agents from any device with seamless synchronization across platforms.</p>
+          </div>
+            
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Expert Support Team</h3>
+            <p class="benefit-description">Our dedicated support specialists are available to help you maximize the potential of your AI agents.</p>
+          </div>
+            
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Guaranteed Reliability</h3>
+            <p class="benefit-description">99.9% uptime guarantee ensures your AI agents are always available when you need them.</p>
+          </div>
+        </div>
+      </div>
+        
+      <!-- Testimonials section with improved heading -->
+      <div class="testimonials-section">
+        <div class="section-header">
+          <span class="section-badge">Testimonials</span>
+          <h2 class="section-title">What Our Clients Say</h2>
+          <p class="section-subtitle">Don't just take our word for it. See what our clients have to say about their experience using Droll Agents.</p>
+        </div>
+          
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Droll Agents has transformed our customer service operations. The AI agents handle routine inquiries with incredible efficiency, allowing our team to focus on more complex issues."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=80&h=80" alt="John M.">
+              </div>
+              <div class="author-info">
+                <h4>John M.</h4>
+                <p>Customer Service Director, TechCorp</p>
               </div>
             </div>
-
-            <div class="feature-item">
-              <div class="feature-icon">🔐</div>
-              <div class="feature-content">
-                <h3 class="feature-title">Privacy-First Approach</h3>
-                <p class="feature-description">
-                  End-to-end encryption and strict data policies ensure your
-                  conversations remain completely confidential.
-                </p>
+          </div>
+            
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"The level of customization available with Droll Agents is unmatched. We've been able to create AI assistants that perfectly align with our brand voice and customer needs."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=80&h=80" alt="Sarah L.">
+              </div>
+              <div class="author-info">
+                <h4>Sarah L.</h4>
+                <p>Marketing VP, Global Retail</p>
               </div>
             </div>
+          </div>
 
-            <div class="feature-item">
-              <div class="feature-icon">🚀</div>
-              <div class="feature-content">
-                <h3 class="feature-title">Deep Customization</h3>
-                <p class="feature-description">
-                  Tailor your agent's personality, capabilities, and response
-                  style to perfectly match your workflow and preferences.
-                </p>
-              </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Our development team was able to integrate Droll Agents into our platform in record time. The documentation is clear, and the API is exceptionally well-designed."</p>
             </div>
-
-            <div class="feature-item">
-              <div class="feature-icon">⚡</div>
-              <div class="feature-content">
-                <h3 class="feature-title">Instant Responses</h3>
-                <p class="feature-description">
-                  Powered by next-gen machine learning architecture delivering
-                  real-time interactions with near-zero latency.
-                </p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=80&h=80" alt="Michael R.">
               </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon">💬</div>
-              <div class="feature-content">
-                <h3 class="feature-title">Natural Conversations</h3>
-                <p class="feature-description">
-                  Context-aware dialogues that flow naturally, understanding
-                  nuance and maintaining coherent, multi-turn discussions.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon">🌍</div>
-              <div class="feature-content">
-                <h3 class="feature-title">Continuous Evolution</h3>
-                <p class="feature-description">
-                  Regular updates and learning improvements ensure your agent
-                  stays ahead of the technology curve.
-                </p>
+              <div class="author-info">
+                <h4>Michael R.</h4>
+                <p>Technical Lead, Innovation Labs</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Footer -->
-      <div id="footer-container" class="page footer" data-scroll-section></div>
     </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
   </div>
 
+  <!-- Add JavaScript enhancement for the scroll indicator -->
+  <script>
+    // Add smooth scrolling for the hero scroll button
+    document.querySelector('.hero-scroll').addEventListener('click', function() {
+      window.scrollTo({
+        top: window.innerHeight - 50,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+  <!-- JavaScript -->
   <script src="JS/templates.js"></script>
   <script src="JS/main.js"></script>
-  <script src="JS/search.js"></script>
-  <script src="JS/vanta.js"></script>
 </body>
 
 </html>
