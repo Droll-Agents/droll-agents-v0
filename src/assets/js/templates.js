@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Loading templates...");
   
   // Load navbar
-  fetch("templates/shared/navbar.html")
+  fetch("../templates/shared/navbar.html")
     .then(response => {
       if (!response.ok) {
         throw new Error(`Failed to load navbar: ${response.status} ${response.statusText}`);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Load footer
-  fetch("templates/shared/footer.html")
+  fetch("../templates/shared/footer.html")
     .then(response => {
       if (!response.ok) {
         throw new Error(`Failed to load footer: ${response.status} ${response.statusText}`);
