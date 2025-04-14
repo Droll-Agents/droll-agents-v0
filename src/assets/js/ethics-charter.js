@@ -1,4 +1,4 @@
-// Privacy Policy Page JavaScript
+// Ethics Charter Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
   // Smooth scrolling for table of contents links
   const tocLinks = document.querySelectorAll('.toc-list a');
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
   // Highlight current section in TOC based on scroll position
   const highlightCurrentSection = () => {
-    const sections = document.querySelectorAll('.privacy-section');
+    const sections = document.querySelectorAll('.ethics-section');
     const scrollPosition = window.scrollY;
     
     sections.forEach(section => {
@@ -55,16 +55,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Update on scroll
   window.addEventListener('scroll', highlightCurrentSection);
   
-  // Pre-apply animation classes to elements that would have been animated
+  // Initialize CTA animation with IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  
   const ctaContent = document.querySelector('.cta-content');
   if (ctaContent) {
-    ctaContent.classList.add('animate-fade-in');
+    observer.observe(ctaContent);
   }
-  
-  // Pre-apply animation to all privacy sections
-  document.querySelectorAll('.privacy-section').forEach(section => {
-    section.classList.add('animate-fade-in');
-  });
   
   // Handle direct links to sections (for when users arrive via a direct link to a section)
   if (window.location.hash) {

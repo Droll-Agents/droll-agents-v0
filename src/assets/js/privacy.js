@@ -1,4 +1,4 @@
-// Ethics Charter Page JavaScript
+// Privacy Policy Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
   // Smooth scrolling for table of contents links
   const tocLinks = document.querySelectorAll('.toc-list a');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Highlight current section in TOC based on scroll position
   const highlightCurrentSection = () => {
-    const sections = document.querySelectorAll('.ethics-section');
+    const sections = document.querySelectorAll('.privacy-section');
     const scrollPosition = window.scrollY;
     
     sections.forEach(section => {
@@ -88,34 +88,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 300);
     }
   }
-  
-  // Initialize animations for ethics sections
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fade-in');
-        sectionObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
-  
-  // Observe ethics sections for animation
-  document.querySelectorAll('.ethics-section').forEach(section => {
-    sectionObserver.observe(section);
-  });
-  
-  // Animate callout boxes when they become visible
-  const calloutObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fade-in');
-        calloutObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  
-  // Observe all ethics callouts
-  document.querySelectorAll('.ethics-callout, .ethics-commitment').forEach(callout => {
-    calloutObserver.observe(callout);
-  });
 });
