@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+  <meta name="description" content="Create your Droll Agents account and get started with our specialized AI assistants for productivity, creativity, analytics and communication." />
+
+  <title>Sign Up - Droll Agents</title>
+  <link rel="icon" href="logo/favicon.png" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/index.css" />
+  <link rel="stylesheet" href="CSS/navbar.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/signup.css" />
+  
+  <!-- Google Sign-In API -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <div class="main-container">
+    <div class="scroll-container">
+      <!-- Signup Section -->
+      <section class="page signup-section">
+        <div class="signup-shapes">
+          <div class="signup-shape signup-shape-1"></div>
+          <div class="signup-shape signup-shape-2"></div>
+          <div class="signup-shape signup-shape-3"></div>
+        </div>
+        
+        <div class="signup-container">
+          <span class="section-badge">Join Droll Agents</span>
+          <h1 class="signup-title">Create Your Account</h1>
+          <p class="signup-subtitle">Join thousands of users enhancing their workflow with specialized AI agents.</p>
+          
+          <form id="signup-form" class="signup-form">
+            <!-- Name Fields -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" autocomplete="given-name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" autocomplete="family-name" required>
+              </div>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Create a strong password" autocomplete="new-password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              
+              <!-- Password strength indicator -->
+              <div class="password-strength">
+                <span class="strength-label">Password strength:</span>
+                <div class="strength-meter">
+                  <div class="strength-progress" data-strength="0"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Confirm Password Field -->
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" autocomplete="new-password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Terms Checkbox -->
+            <div class="form-group terms">
+              <input type="checkbox" id="terms" name="terms" required>
+              <label for="terms">
+                I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>
+              </label>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="signup-submit-btn">
+              <span>Create Account</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            
+            <!-- Or separator -->
+            <div class="divider">
+              <span>Or continue with</span>
+            </div>
+            
+            <!-- Social Signup -->
+            <div class="social-signup">
+              <button type="button" class="social-signup-btn google">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                Sign up with Google
+              </button>
+              
+              <button type="button" class="social-signup-btn github">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                  <path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.24.73-.53v-1.89c-3.03.66-3.67-1.45-3.67-1.45-.51-1.28-1.24-1.62-1.24-1.62-.97-.66.1-.65.1-.65 1.07.08 1.64 1.09 1.64 1.09.95 1.61 2.49 1.15 3.1.88.1-.69.37-1.15.67-1.42-2.34-.26-4.79-1.17-4.79-5.19 0-1.14.41-2.08 1.09-2.82-.11-.26-.48-1.32.1-2.76 0 0 .9-.28 2.91 1.09.85-.24 1.75-.36 2.65-.37.9 0 1.8.12 2.65.37 2.02-1.37 2.91-1.09 2.91-1.09.58 1.44.21 2.5.1 2.76.67.74 1.09 1.67 1.09 2.82 0 4.04-2.46 4.93-4.81 5.18.38.32.72.97.72 1.95v2.88c0 .28.19.62.74.52A11 11 0 0012 1.27"/>
+                </svg>
+                Sign up with GitHub
+              </button>
+            </div>
+            
+            <!-- Login link -->
+            <p class="login-prompt">
+              Already have an account? <a href="login.html">Sign In</a>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div id="footer-container" class="page footer"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="JS/templates.js"></script>
+  <script src="JS/main.js"></script>
+  <script src="JS/signup.js"></script>
+</body>
+
+</html>
