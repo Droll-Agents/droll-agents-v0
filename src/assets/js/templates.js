@@ -89,14 +89,14 @@ function initNavbar() {
 function createMobileMenuContent() {
   const navLinks = document.querySelector('.nav-links');
   const linksHTML = navLinks ? Array.from(navLinks.querySelectorAll('.nav-link')).map(link => {
-    const icon = link.querySelector('.nav-link-icon').innerHTML;
+    const icon = link.querySelector('.nav-link-icon') ? link.querySelector('.nav-link-icon').innerHTML : '';
     const text = link.querySelector('.nav-link-text').textContent;
     const href = link.getAttribute('href');
     
     return `
       <a href="${href}" class="mobile-nav-link">
         <div class="mobile-nav-icon">
-          ${icon}
+          ${icon || ''}
         </div>
         <span>${text}</span>
       </a>
@@ -132,15 +132,23 @@ function createMobileMenuContent() {
 // Set active nav link based on current page
 function setActiveNavLink() {
   const currentPath = window.location.pathname;
-  const filename = currentPath.split('/').pop() || 'index.html';
+  const currentPageName = currentPath.split('/').pop() || 'index.html';
+  
+  console.log("Current page:", currentPageName);
   
   // Desktop nav links
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     const linkHref = link.getAttribute('href');
-    if (linkHref === filename || 
-        (filename === 'index.html' && linkHref === '/' || linkHref === '')) {
+    const linkPageName = linkHref.split('/').pop(); // Get just the filename from the href
+    
+    // Check if current page matches the link's target page
+    if (linkPageName === currentPageName || 
+        (currentPageName === 'index.html' && (linkPageName === '' || linkHref.endsWith('index.html')))) {
       link.classList.add('active');
+      console.log("Set active:", linkHref);
+    } else {
+      link.classList.remove('active');
     }
   });
   
@@ -149,9 +157,13 @@ function setActiveNavLink() {
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     mobileNavLinks.forEach(link => {
       const linkHref = link.getAttribute('href');
-      if (linkHref === filename || 
-          (filename === 'index.html' && linkHref === '/' || linkHref === '')) {
+      const linkPageName = linkHref.split('/').pop();
+      
+      if (linkPageName === currentPageName || 
+          (currentPageName === 'index.html' && (linkPageName === '' || linkHref.endsWith('index.html')))) {
         link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
   }, 100);

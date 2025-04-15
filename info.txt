@@ -1,1 +1,10 @@
+we need to improve the ui/ux of the meeting-preparation-agent
+
+you need to make sure that even after you make any changes, the agent should work perfectly fine
+
+now your task is to modify the css and js of the agent so that the entire desing of the agnet aligns with the theme of the webiste, includign the input fields, teh results and everything
+
+but please make sure that your changes doesn't hinder the working of the agent
+
 give me the compltete, entire and the working code for ethics-charter.html, ethics-charter.css, ethics-charter,js, security.html, security.css, security.js, reaseach.html, reaseach.css, reaseach.js
+hover

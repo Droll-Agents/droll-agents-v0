@@ -156,27 +156,23 @@
 }
 
 .nav-link:hover {
-  color: #0066cc;
-  background: rgba(0, 102, 204, 0.04);
+  color: var(--primary-color);
+  background: rgba(0, 102, 204, 0.08);
   transform: translateY(-1px);
 }
 
-.nav-link.active {
-  color: #0066cc;
+/* Enhanced specificity for active class to ensure it's not overridden */
+.nav-link.active,
+.nav-links .nav-link.active,
+.nav-middle .nav-link.active {
+  color: var(--primary-color) !important;
   font-weight: 600;
-  background: rgba(0, 102, 204, 0.08);
+  background: rgba(0, 102, 204, 0.12);
 }
 
-.nav-link-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.9;
-  transition: transform 0.2s ease;
-}
-
-.nav-link:hover .nav-link-icon {
-  transform: translateY(-2px);
+/* Force active tab to maintain its background color */
+.nav-link.active:hover {
+  background: rgba(0, 102, 204, 0.12);
 }
 
 /* Authentication Buttons */
@@ -298,17 +294,6 @@
   transform: translateX(5px);
 }
 
-.mobile-nav-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: rgba(0, 102, 204, 0.08);
-  border-radius: 8px;
-  color: var(--primary-color);
-}
-
 .mobile-auth-buttons {
   display: flex;
   flex-direction: column;
@@ -346,6 +331,32 @@ body {
   padding-top: var(--navbar-height);
 }
 
+.nav-link-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--navbar-text);
+  transition: all 0.2s ease;
+}
+
+/* Active link and hover styles */
+.nav-link.active .nav-link-text,
+.nav-link.active .nav-link-icon {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.nav-link:hover .nav-link-text,
+.nav-link:hover .nav-link-icon {
+  color: var(--primary-color);
+}
+
+/* Make sure active styles have higher specificity */
+.nav-middle .nav-link.active,
+.nav-links .nav-link.active {
+  background: rgba(0, 102, 204, 0.12);
+  color: var(--primary-color);
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .nav-link-text {
@@ -355,9 +366,10 @@ body {
   .nav-link {
     padding: 0.6rem;
   }
-  
-  .nav-link-icon {
-    margin: 0;
+
+  /* Active styles for mobile */
+  .nav-link.active {
+    background: rgba(0, 102, 204, 0.12);
   }
 }
 
